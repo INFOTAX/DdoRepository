@@ -1,0 +1,9 @@
+f:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.Domain\bin\MCD\Debug\netcoreapp2.0\DDO.Domain.deps.json
+f:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.Domain\bin\MCD\Debug\netcoreapp2.0\DDO.Domain.dll
+f:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.Domain\bin\MCD\Debug\netcoreapp2.0\DDO.Domain.pdb
+f:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.Domain\obj\MCD\Debug\netcoreapp2.0\DDO.Domain.csprojAssemblyReference.cache
+f:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.Domain\obj\MCD\Debug\netcoreapp2.0\DDO.Domain.csproj.CoreCompileInputs.cache
+f:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.Domain\obj\MCD\Debug\netcoreapp2.0\DDO.Domain.AssemblyInfoInputs.cache
+f:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.Domain\obj\MCD\Debug\netcoreapp2.0\DDO.Domain.AssemblyInfo.cs
+f:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.Domain\obj\MCD\Debug\netcoreapp2.0\DDO.Domain.dll
+f:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.Domain\obj\MCD\Debug\netcoreapp2.0\DDO.Domain.pdb

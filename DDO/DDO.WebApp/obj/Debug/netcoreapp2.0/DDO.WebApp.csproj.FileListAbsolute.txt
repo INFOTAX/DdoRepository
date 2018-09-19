@@ -1,0 +1,8 @@
+F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\bin\Debug\netcoreapp2.0\DDO.WebApp.deps.json
+F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\bin\Debug\netcoreapp2.0\DDO.WebApp.runtimeconfig.json
+F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\bin\Debug\netcoreapp2.0\DDO.WebApp.runtimeconfig.dev.json
+F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\bin\Debug\netcoreapp2.0\DDO.WebApp.dll
+F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\obj\Debug\netcoreapp2.0\DDO.WebApp.csprojAssemblyReference.cache
+F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\obj\Debug\netcoreapp2.0\DDO.WebApp.csproj.CoreCompileInputs.cache
+F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\obj\Debug\netcoreapp2.0\DDO.WebApp.AssemblyInfoInputs.cache
+F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\obj\Debug\netcoreapp2.0\DDO.WebApp.AssemblyInfo.cs
