@@ -36,10 +36,10 @@ namespace DDO.Domain.Accounting
         public string PlaceOfSupply { get; set; }
 
         public string ImgUrl { get; set; }
-        public bool InventorySelection { get; set; }
+        
 
         public int SelectedYear { get; set; }
-        public string InvoicePrefix { get; set; }
+        
         
         
 
@@ -70,7 +70,7 @@ namespace DDO.Domain.Accounting
         }
         public AccountingUnit(string businessName, string placeOfSupply, string gstin, string tdsGstin, string email, string address, string contactNumber,
                             string turnOver, string bankAccountName, string bankAccountNumber, string ifscCode, string registrationType,
-                            string termsAndCondition, bool inventorySelection, string currentGrossTurnOver, int selectedYear,string invoicePrefix,string pan)
+                            string termsAndCondition,  string currentGrossTurnOver, int selectedYear, string pan)
         {
             BusinessName = businessName;
             PlaceOfSupply = placeOfSupply;
@@ -85,17 +85,19 @@ namespace DDO.Domain.Accounting
             IfscCode = ifscCode;
             RegistrationType = registrationType;
             TermsAndCondition = termsAndCondition;
-            InventorySelection = inventorySelection;
+            
             CurrentGrossTurnOver = currentGrossTurnOver;
             SelectedYear = selectedYear;
-            InvoicePrefix = invoicePrefix;
+            
             Pan = pan;
         }
 
         public void Modify(string businessName, string placeOfSupply, string gstin, 
                             string tdsGstin, string email, string address, string contactNumber,
-                            string turnOver, string bankAccountName, string bankAccountNumber, string ifscCode, string registrationType,
-                            string termsAndCondition, bool inventorySelection, string currentGrossTurnOver, int selectedYear,string invoicePrefix,int companyId,string pan)
+                            string turnOver, string bankAccountName, string bankAccountNumber, 
+                            string ifscCode, string registrationType,
+                            string termsAndCondition,  string currentGrossTurnOver, 
+                            int selectedYear, string pan)
         {
 
             BusinessName = businessName;
@@ -111,10 +113,10 @@ namespace DDO.Domain.Accounting
             IfscCode = ifscCode;
             RegistrationType = registrationType;
             TermsAndCondition = termsAndCondition;
-            InventorySelection = inventorySelection;
+            
             CurrentGrossTurnOver = currentGrossTurnOver;
             SelectedYear = selectedYear;
-            InvoicePrefix = invoicePrefix;
+            
             
             Pan = pan;
         }

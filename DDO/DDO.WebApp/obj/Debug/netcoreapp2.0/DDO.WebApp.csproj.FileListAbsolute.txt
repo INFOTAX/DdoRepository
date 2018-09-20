@@ -6,3 +6,11 @@ F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\obj\Debug\netcoreapp2
 F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\obj\Debug\netcoreapp2.0\DDO.WebApp.csproj.CoreCompileInputs.cache
 F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\obj\Debug\netcoreapp2.0\DDO.WebApp.AssemblyInfoInputs.cache
 F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\obj\Debug\netcoreapp2.0\DDO.WebApp.AssemblyInfo.cs
+F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\bin\Debug\netcoreapp2.0\DDO.WebApp.pdb
+F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\bin\Debug\netcoreapp2.0\DDO.Domain.dll
+F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\bin\Debug\netcoreapp2.0\DDO.Persistence.dll
+F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\bin\Debug\netcoreapp2.0\DDO.Domain.pdb
+F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\bin\Debug\netcoreapp2.0\DDO.Persistence.pdb
+F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\obj\Debug\netcoreapp2.0\DDO.WebApp.csproj.CopyComplete
+F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\obj\Debug\netcoreapp2.0\DDO.WebApp.dll
+F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\obj\Debug\netcoreapp2.0\DDO.WebApp.pdb

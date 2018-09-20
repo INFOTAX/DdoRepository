@@ -16,10 +16,10 @@ namespace DDO.WebApp.Api.AccountingUnitApi
         public string IfscCode { get; set; }
         public string RegistrationType { get; set; }
         public string TermsAndCondition { get; set; }
-        public bool InventorySelection { get; set; }
+        
         public string CurrentGrossTurnOver { get; set; }
         public int SelectedYear { get; set; }
-        public string InvoicePrefix { get; set; }
+        
         public int CompanyId { get; set; }
         public string Pan { get; set; }
     }

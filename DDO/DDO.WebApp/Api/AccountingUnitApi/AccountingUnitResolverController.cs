@@ -13,7 +13,7 @@ namespace DDO.WebApp.Api.AccountingUnitApi
 {
     [Produces("application/json")]
     [Route("api/AccountingUnitResolver")]
-    [Authorize]
+    
     public class AccountingUnitResolverController : Controller
     {
         private readonly IQueryModelDatabase _database;
@@ -35,16 +35,18 @@ namespace DDO.WebApp.Api.AccountingUnitApi
 
         private string GetCurrentAccountingUnitId()
         {
-            var accountingUnitId = _database.AccountingUnits.SingleAsync(t => t.Subject == User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value).Result;
+            // var accountingUnitId = _database.AccountingUnits.SingleAsync(t => t.Subject == User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value).Result;
 
-            return accountingUnitId.Id;
+            // return accountingUnitId.Id;
+
+            return "1";
         }
 
 
         protected async Task<string> GetAccountingUnitPlaceOfSupply()
         {
-            var accountingUnit = await _database.AccountingUnits.SingleOrDefaultAsync(
-                u => u.Subject == User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value);
+            var accountingUnit = await _database.AccountingUnits.FirstOrDefaultAsync(c=>c.Id == AccountingUnitId);
+                // u => u.Subject == User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value);
 
             return accountingUnit.PlaceOfSupply;
         }
@@ -64,8 +66,10 @@ namespace DDO.WebApp.Api.AccountingUnitApi
         public async Task<AccountingUnitResource> GetAccountingUnitProfielById()
         {
             //Todo uncomment
-            var accountingUnit = await _database.AccountingUnits.SingleOrDefaultAsync
-                          (u => u.Subject == User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value);
+            // var accountingUnit = await _database.AccountingUnits.SingleOrDefaultAsync
+            //               (u => u.Subject == User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value);
+
+            var accountingUnit = await _database.AccountingUnits.FirstOrDefaultAsync(c=>c.Id == AccountingUnitId);
 
             return _mapper.Map<AccountingUnit, AccountingUnitResource>(accountingUnit);
         }
@@ -80,29 +84,30 @@ namespace DDO.WebApp.Api.AccountingUnitApi
                 return NotFound();
             }
 
-            accountingUnitFromDb.Modify(model.BusinessName, model.PlaceOfSupply, model.Gstin, model.TdsGstin, model.Email, model.Address, model.ContactNumber, model.TurnOver,
+            accountingUnitFromDb.Modify(model.BusinessName, model.PlaceOfSupply, model.Gstin, model.TdsGstin, model.Email, model.Address,
+                                 model.ContactNumber, model.TurnOver,
                                 model.BankAccountName, model.BankAccountNumber, model.IfscCode, model.RegistrationType, model.TermsAndCondition,
-                                model.InventorySelection, model.CurrentGrossTurnOver, model.SelectedYear, model.InvoicePrefix,model.CompanyId,model.Pan);
+                                 model.CurrentGrossTurnOver, model.SelectedYear,model.Pan);
 
             await _unitOfWork.CompleteAsync();
             return Ok(model);
         }
-        [HttpPost("Register")]
-        public async Task<IActionResult> CreateAccountingUnit([FromBody] SaveAccountingUnitResource model)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+        // [HttpPost("Register")]
+        // public async Task<IActionResult> CreateAccountingUnit([FromBody] SaveAccountingUnitResource model)
+        // {
+        //     if (!ModelState.IsValid)
+        //         return BadRequest(ModelState);
 
 
 
-            var accountingUnit = new AccountingUnit(model.BusinessName, model.PlaceOfSupply, model.Gstin, model.TdsGstin, model.Email, model.Address, model.ContactNumber, model.TurnOver,
-                               model.BankAccountName, model.BankAccountNumber, model.IfscCode, model.RegistrationType, model.TermsAndCondition,
-                               model.InventorySelection, model.CurrentGrossTurnOver, model.SelectedYear, model.InvoicePrefix,model.Pan);
+        //     var accountingUnit = new AccountingUnit(model.BusinessName, model.PlaceOfSupply, model.Gstin, model.TdsGstin, model.Email, model.Address, model.ContactNumber, model.TurnOver,
+        //                        model.BankAccountName, model.BankAccountNumber, model.IfscCode, model.RegistrationType, model.TermsAndCondition,
+        //                        model.InventorySelection, model.CurrentGrossTurnOver, model.SelectedYear, model.InvoicePrefix,model.Pan);
 
-            _accountingUnitRepository.Add(accountingUnit);
-            await _unitOfWork.CompleteAsync();
-            return Ok(model);
-        }
+        //     _accountingUnitRepository.Add(accountingUnit);
+        //     await _unitOfWork.CompleteAsync();
+        //     return Ok(model);
+        // }
      
     }
 }

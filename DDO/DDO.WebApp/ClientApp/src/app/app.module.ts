@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import {  HttpClientModule } from '@angular/common/http';
 
 
 
@@ -38,6 +39,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     BrowserModule,
     PrimeNgModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     
     RouterModule.forRoot([

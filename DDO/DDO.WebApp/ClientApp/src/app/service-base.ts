@@ -44,7 +44,7 @@ export abstract class ServiceBase<T>{
       .pipe(
         tap(data => console.log('created: ' + JSON.stringify(data))),
         tap(data => {
-          this.entities.push(data);
+          // this.entities.push(data);
         }),
         catchError(this.handleError)
       );
