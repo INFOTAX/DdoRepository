@@ -1,5 +1,6 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { Router } from "@angular/router";
+import { IUserProfile, LoginService } from '../login/login.service';
 
 // import { LoginService, IUserProfile } from '../login/login.service';
 
@@ -14,12 +15,12 @@ import { Router } from "@angular/router";
 })
 export class TopMenuComponent implements OnInit {
   
-  // userProfile: IUserProfile =this.loginService.getUserProfile();
+  userProfile: IUserProfile =this.loginService.getUserProfile();
   toggleMenu:boolean=false;
 
 
   constructor(private router : Router,
-              // private loginService : LoginService,
+              private loginService : LoginService,
               private elementRef: ElementRef) { }
 
   ngOnInit() {
@@ -39,7 +40,9 @@ export class TopMenuComponent implements OnInit {
   }
 
   logOut(): void {        
-    //  this.loginService.logOut();        
+    localStorage.removeItem('token');
+    localStorage.removeItem('profile');
+    localStorage.removeItem('role');      
     this.router.navigate(['/login']);
 }
 

@@ -10,6 +10,7 @@ import { debounceTime } from 'rxjs/operators';
 import { ISupplier } from '../../suppliers/isupplier';
 import { StateList } from '../../../state-list';
 import { SupplierService } from '../../suppliers/supplier.service';
+import { UserProfileService } from '../../../user-profile/userprofile.service';
 
 @Component({
   selector: 'app-tds-form',
@@ -56,7 +57,7 @@ export class TdsFormComponent implements OnInit {
   constructor(private fb: FormBuilder,
               private tdsService: TdsService,
               private router: Router,
-              // private userProfileService: UserProfileService,
+              private userProfileService: UserProfileService,
               private route: ActivatedRoute,
               private supplierService: SupplierService
               ) { }
@@ -193,15 +194,15 @@ private onTdsRetrieved(tds:Itds): void{
      this.pageTitle = 'Add TDS Details';
      console.log("add")
 
-    //  this.userProfileService.getProfile().subscribe(up => {
+     this.userProfileService.getProfile().subscribe(up => {
 
-    //   this.accountingUnitPlaceOfSupply = up.placeOfSupply;
-    //   console.log(this.accountingUnitPlaceOfSupply);
+      this.accountingUnitPlaceOfSupply = up.placeOfSupply;
+      console.log(this.accountingUnitPlaceOfSupply);
 
-  // this.tdsForm.patchValue({
-  //     placeOfSupply: this.accountingUnitPlaceOfSupply
-  // });
-  //  });
+  this.tdsForm.patchValue({
+      placeOfSupply: this.accountingUnitPlaceOfSupply
+  });
+   });
 
    }
    else
@@ -222,12 +223,12 @@ private onTdsRetrieved(tds:Itds): void{
 
     
 });
-// this.userProfileService.getAccountingUnits().subscribe(up => {
+this.userProfileService.getAccountingUnits().subscribe(up => {
 
-//   this.accountingUnitPlaceOfSupply = up.placeOfSupply;
-//   this.checkSupplyType(event);
+  this.accountingUnitPlaceOfSupply = up.placeOfSupply;
+  this.checkSupplyType(event);
 
-// });
+});
 
 
   }

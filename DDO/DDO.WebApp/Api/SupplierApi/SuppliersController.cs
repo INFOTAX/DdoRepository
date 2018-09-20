@@ -82,7 +82,7 @@ namespace DDO.WebApp.Api.SupplierApi
 
 
             var supplier = new Supplier(model.Name, model.Gstin, model.Address, model.State, model.ContactNumber,
-                                          AccountingUnitId, model.RegistrationType,model.Email);
+                                          AccountingUnitId, model.RegistrationType,model.Email,AdminId);
 
             _supplierRepository.Add(supplier);
 

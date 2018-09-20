@@ -8,6 +8,7 @@ using DDO.Domain.SupplierModule;
 using DDO.Domain.TdsModule;
 using DDO.Persistence;
 using DDO.Persistence.Repository;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -45,6 +46,17 @@ namespace DDO.WebApp
 
 
             services.AddAutoMapper();
+             services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+            }).AddJwtBearer(options =>
+            {
+                options.Authority = Configuration.GetSection("Auth0Settings").GetSection("Host").Value;
+                options.Audience = Configuration.GetSection("Auth0Settings").GetSection("Audience").Value;
+            });
+
             services.AddMvc();
               services.AddSpaStaticFiles(configuration =>
             {
@@ -65,7 +77,7 @@ namespace DDO.WebApp
             }
             app.UseStaticFiles();
               app.UseSpaStaticFiles();
-
+            app.UseAuthentication();
             app.UseMvc();
 
              app.UseSpa(spa =>

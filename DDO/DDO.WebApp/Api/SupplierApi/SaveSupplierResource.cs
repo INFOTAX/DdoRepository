@@ -6,6 +6,7 @@ namespace DDO.WebApp.Api.SupplierApi
     public class SaveSupplierResource
     {
         public string Name { get; set; }
+        
         public string Gstin { get; set; }
         public string Address { get; set; }
         public string State { get; set; }

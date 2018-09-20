@@ -1,5 +1,6 @@
 using System;
 using DDO.Domain.Accounting;
+using DDO.Domain.AdminModule;
 using DDO.Domain.Inferface;
 using DDO.Domain.SupplierModule;
 
@@ -29,6 +30,8 @@ namespace DDO.Domain.TdsModule
         public AccountingUnit AccountingUnit {get; set;}
 
         public string AccountingUnitId {get; set;}
+        public Admin Admin { get; set; }
+        public int AdminId { get; set; }
 
     public Tds()
     {
@@ -37,7 +40,7 @@ namespace DDO.Domain.TdsModule
 
 
     public Tds(int supplierId, DateTime date, string placeOfSupply, double amountPaid, double cgstAmount,
-                double sgstAmount, double igstAmount, double tdsAmount, string accountingUnitId)
+                double sgstAmount, double igstAmount, double tdsAmount, string accountingUnitId, int adminId)
     {
         SupplierId = supplierId;
         Date = date;
@@ -48,7 +51,8 @@ namespace DDO.Domain.TdsModule
         IgstAmount = igstAmount;
         TdsAmount = tdsAmount;
         AccountingUnitId = accountingUnitId;
-        IsActive = true;
+        AdminId = adminId;
+            IsActive = true;
 
   }
 

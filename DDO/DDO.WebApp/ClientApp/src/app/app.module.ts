@@ -15,8 +15,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import {  HttpClientModule } from '@angular/common/http';
+import {  HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { UserProfileService } from './user-profile/userprofile.service';
+import { UserProfileComponent } from './user-profile/user-profile/user-profile.component';
+import { JwtModule } from '@auth0/angular-jwt';
+import { SignInFormComponent } from './login/sign-in-form/sign-in-form.component';
+import { LoginService } from './login/login.service';
+import { AuthGuardService } from './guard/auth-guard.service';
+import { TokenInterceptor } from './login/token-interceptor';
+import { Gstr7Service } from './admin/gstr7.service';
+import { AdminModule } from './admin/admin.module';
 
+export function tokenGetter() {
+  return localStorage.getItem("token");
+}
 
 
 
@@ -28,10 +40,13 @@ import {  HttpClientModule } from '@angular/common/http';
     SupplierFormComponent,
     SupplierListComponent,
     AuthenticatedUserComponent,
+    UserProfileComponent,
     DashboardComponent,
     TopMenuComponent,
     SidebarComponent,
     DashboardComponent,
+    SignInFormComponent,
+
   ],
 
 
@@ -40,33 +55,66 @@ import {  HttpClientModule } from '@angular/common/http';
     PrimeNgModule,
     FormsModule,
     HttpClientModule,
+    AdminModule,
     ReactiveFormsModule,
+
+    
     
     RouterModule.forRoot([
       { path: 'authenticated',
         component : AuthenticatedUserComponent,
+
+        canActivate: [AuthGuardService],
+        data : {
+          permission: {
+            only: ["User"],
+            redirectTo: 'login'
+        }
+        },
+    
+
         children : [
           
       {path: 'supplier/:id', component: SupplierFormComponent},
       {path: 'supplier', component: SupplierListComponent},
       {path: 'tds', component: TdsListComponent },
       {path: 'tds/:id', component: TdsFormComponent },
+      {path: 'dash-board', component: DashboardComponent },
+       ]
       
-    
       
-        ]
       },
-        // {path : 'login', component : LoginFormComponent},
+        {path : 'login', component : SignInFormComponent},
         { path: '', redirectTo: 'authenticated/dash-board', pathMatch: 'full' },
       { path: '**', redirectTo: 'authenticated/dash-board' }
       
     
-    ])
+    ]),
+
+       JwtModule.forRoot({
+       config: {
+
+        headerName: 'Authorization',
+        authScheme: 'Bearer ',
+        tokenGetter: tokenGetter,
+
+      }
+    })
+
   ],
   
   
   providers: [SupplierService,
-              TdsService],
+              TdsService,
+            UserProfileService,
+            LoginService,
+          AuthGuardService, 
+          Gstr7Service,
+          {
+            provide: HTTP_INTERCEPTORS,
+            useClass: TokenInterceptor,
+            multi: true
+          }],
   
   bootstrap: [AppComponent]
 })

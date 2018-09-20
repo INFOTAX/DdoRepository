@@ -28,6 +28,8 @@ namespace DDO.Persistence.Migrations
 
                     b.Property<string>("Address");
 
+                    b.Property<int>("AdminId");
+
                     b.Property<string>("AuthorizedRepresentativeName");
 
                     b.Property<string>("BankAccountName");
@@ -62,6 +64,8 @@ namespace DDO.Persistence.Migrations
 
                     b.Property<string>("RegistrationType");
 
+                    b.Property<string>("Role");
+
                     b.Property<int>("SelectedYear");
 
                     b.Property<string>("Subject");
@@ -74,7 +78,21 @@ namespace DDO.Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("AdminId");
+
                     b.ToTable("AccountingUnits");
+                });
+
+            modelBuilder.Entity("DDO.Domain.AdminModule.Admin", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Admins");
                 });
 
             modelBuilder.Entity("DDO.Domain.SupplierModule.Supplier", b =>
@@ -85,6 +103,8 @@ namespace DDO.Persistence.Migrations
                     b.Property<string>("AccountingUnitId");
 
                     b.Property<string>("Address");
+
+                    b.Property<int>("AdminId");
 
                     b.Property<string>("ContactNumber");
 
@@ -104,6 +124,8 @@ namespace DDO.Persistence.Migrations
 
                     b.HasIndex("AccountingUnitId");
 
+                    b.HasIndex("AdminId");
+
                     b.ToTable("Suppliers");
                 });
 
@@ -113,6 +135,8 @@ namespace DDO.Persistence.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("AccountingUnitId");
+
+                    b.Property<int>("AdminId");
 
                     b.Property<double>("AmountPaid");
 
@@ -136,9 +160,19 @@ namespace DDO.Persistence.Migrations
 
                     b.HasIndex("AccountingUnitId");
 
+                    b.HasIndex("AdminId");
+
                     b.HasIndex("SupplierId");
 
                     b.ToTable("Tdss");
+                });
+
+            modelBuilder.Entity("DDO.Domain.Accounting.AccountingUnit", b =>
+                {
+                    b.HasOne("DDO.Domain.AdminModule.Admin", "Admin")
+                        .WithMany("AccountingUnits")
+                        .HasForeignKey("AdminId")
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("DDO.Domain.SupplierModule.Supplier", b =>
@@ -146,6 +180,11 @@ namespace DDO.Persistence.Migrations
                     b.HasOne("DDO.Domain.Accounting.AccountingUnit", "AccountingUnit")
                         .WithMany("Suppliers")
                         .HasForeignKey("AccountingUnitId");
+
+                    b.HasOne("DDO.Domain.AdminModule.Admin", "Admin")
+                        .WithMany("Suppliers")
+                        .HasForeignKey("AdminId")
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("DDO.Domain.TdsModule.Tds", b =>
@@ -153,6 +192,11 @@ namespace DDO.Persistence.Migrations
                     b.HasOne("DDO.Domain.Accounting.AccountingUnit", "AccountingUnit")
                         .WithMany()
                         .HasForeignKey("AccountingUnitId");
+
+                    b.HasOne("DDO.Domain.AdminModule.Admin", "Admin")
+                        .WithMany("Tdss")
+                        .HasForeignKey("AdminId")
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("DDO.Domain.SupplierModule.Supplier", "Supplier")
                         .WithMany()

@@ -1,6 +1,7 @@
 ﻿
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using DDO.Domain.AdminModule;
 using DDO.Domain.SupplierModule;
 
 namespace DDO.Domain.Accounting
@@ -11,6 +12,7 @@ namespace DDO.Domain.Accounting
         public string Id { get; set; }
 
         public string Name { get; set; }
+        public string Role { get; set; }
         public string BusinessName { get; set; }
         public string Subject { get; set; }
         public string GstinPassword { get; set; }
@@ -31,6 +33,8 @@ namespace DDO.Domain.Accounting
         public string BankAccountName { get; set; }
         public string BankAccountNumber { get; set; }
         public string Email { get; set; }
+        public Admin Admin { get; set; }
+        public int AdminId { get; set; }
         
         
         public string PlaceOfSupply { get; set; }
@@ -68,11 +72,12 @@ namespace DDO.Domain.Accounting
             //ReceiptNotes=new List<ReceiptNote>();
             //AdvancePaids=new List<AdvancePaid>();
         }
-        public AccountingUnit(string businessName, string placeOfSupply, string gstin, string tdsGstin, string email, string address, string contactNumber,
+        public AccountingUnit(string businessName, string role, string placeOfSupply, string gstin, string tdsGstin, string email, string address, string contactNumber,
                             string turnOver, string bankAccountName, string bankAccountNumber, string ifscCode, string registrationType,
                             string termsAndCondition,  string currentGrossTurnOver, int selectedYear, string pan)
         {
             BusinessName = businessName;
+            Role = role;
             PlaceOfSupply = placeOfSupply;
             Gstin = gstin;
             TdsGstin = tdsGstin;

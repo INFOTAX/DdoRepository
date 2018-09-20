@@ -66,7 +66,7 @@ namespace DDO.WebApp.Api.SupplierApi
 
             var tds = new Tds(model.SupplierId, model.Date, model.PlaceOfSupply, model.AmountPaid,
                              model.CgstAmount, model.SgstAmount,model.IgstAmount, model.TdsAmount, 
-                                  AccountingUnitId);
+                                  AccountingUnitId, AdminId);
 
             _tdsRepository.Add(tds);
 
