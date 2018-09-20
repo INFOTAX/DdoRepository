@@ -2,15 +2,71 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { PrimeNgModule } from './prime-ng/prime-ng.module';
+import { SupplierService } from './components/suppliers/supplier.service';
+import { TdsService } from './components/tds/tds.service';
+import { Routes, RouterModule } from '@angular/router';
+import { AuthenticatedUserComponent } from './authenticated-user/authenticated-user.component';
+import { SupplierFormComponent } from './components/suppliers/supplier-form/supplier-form.component';
+import { SupplierListComponent } from './components/suppliers/supplier-list/supplier-list.component';
+import { TdsListComponent } from './components/tds/tds-list/tds-list.component';
+import { TdsFormComponent } from './components/tds/tds-form/tds-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TopMenuComponent } from './top-menu/top-menu.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TdsFormComponent, 
+    TdsListComponent,
+    SupplierFormComponent,
+    SupplierListComponent,
+    AuthenticatedUserComponent,
+    DashboardComponent,
+    TopMenuComponent,
+    SidebarComponent,
+    DashboardComponent,
   ],
+
+
   imports: [
-    BrowserModule
+    BrowserModule,
+    PrimeNgModule,
+    FormsModule,
+    ReactiveFormsModule,
+    
+    RouterModule.forRoot([
+      { path: 'authenticated',
+        component : AuthenticatedUserComponent,
+        children : [
+          
+      {path: 'supplier/:id', component: SupplierFormComponent},
+      {path: 'supplier', component: SupplierListComponent},
+      {path: 'tds', component: TdsListComponent },
+      {path: 'tds/:id', component: TdsFormComponent },
+      
+    
+      
+        ]
+      },
+        // {path : 'login', component : LoginFormComponent},
+        { path: '', redirectTo: 'authenticated/dash-board', pathMatch: 'full' },
+      { path: '**', redirectTo: 'authenticated/dash-board' }
+      
+    
+    ])
   ],
-  providers: [],
+  
+  
+  providers: [SupplierService,
+              TdsService],
+  
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

@@ -3,8 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using DDO.Domain.Accounting;
+using DDO.Domain.SupplierModule;
+using DDO.Domain.TdsModule;
+using DDO.Persistence;
+using DDO.Persistence.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -24,6 +30,19 @@ namespace DDO.WebApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
+            services.AddScoped<IAccountingUnitRepository, AccountingUnitRepository>();
+            services.AddScoped<ISupplierRepository, SupplierRepository>();
+            services.AddScoped<ITdsRepository, TdsRepository>();
+
+            services.AddScoped<IQueryModelDatabase, QueryModelDatabase>();
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+                        services.AddDbContext<ApplicationDbContext>(
+                options => options.UseSqlServer(Configuration.GetConnectionString("Default"))
+            );
+
 
             services.AddAutoMapper();
             services.AddMvc();
@@ -37,10 +56,14 @@ namespace DDO.WebApp
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+             
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseStaticFiles();
               app.UseSpaStaticFiles();
 
             app.UseMvc();
