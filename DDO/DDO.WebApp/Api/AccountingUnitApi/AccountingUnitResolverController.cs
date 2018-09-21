@@ -64,6 +64,7 @@ namespace DDO.WebApp.Api.AccountingUnitApi
         public async Task<IEnumerable<AccountingUnitResource>> GetAccountingUnits()
         {
             var accountingUnits = await _database.AccountingUnits
+                                    .Where(a=>a.Role=="User")
                                     .ToListAsync();
 
             return _mapper.Map<List<AccountingUnit>, List<AccountingUnitResource>>(accountingUnits.ToList());

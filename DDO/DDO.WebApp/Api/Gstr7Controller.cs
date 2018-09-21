@@ -61,7 +61,7 @@ namespace DDO.WebApp.Api
                 var gstr7 = _database.TdssFor(accountingUnit.Id).Where(co => co.IsActive == true)
                          .ForDateRange(frmDate,toDate)
                                               .Select(a=> new Gstr7{
-                             Gstin = a.AccountingUnit.Gstin,
+                             Gstin = a.Supplier.Gstin,
                              
                             IgstAmount = a.IgstAmount,
                             CgstAmount = a.CgstAmount,

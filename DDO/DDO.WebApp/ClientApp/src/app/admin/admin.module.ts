@@ -24,7 +24,7 @@ const appRoutes: Routes = [
   children :[
     { path: 'dashboard', component: AdminUserwiseReportDashboardComponent},
     { path: 'Gstr7/:monthId/:yearId/:accountingUnitId', component: Gstr7Component},
-    { path: 'dashboard/:monthId/:yearId/:accountingUnitId/Gstr7-Consolidated', component: Gstr7ConsolidatedComponent},
+    { path: 'Gstr7/Consolidated/:monthId/:yearId/:accountingUnitId', component: Gstr7ConsolidatedComponent},
     
      
   ]}
