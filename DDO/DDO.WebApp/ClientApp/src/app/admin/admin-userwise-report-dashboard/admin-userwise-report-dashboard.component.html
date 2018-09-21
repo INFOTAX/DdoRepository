@@ -10,11 +10,11 @@
   </div>
 </div>
 
-
+<!-- 
 <div class="ui-g">
   <div class="ui-g-4 ui-md-offset-3">
     <div class="ui-g-6 ui-sm-6-ui-md-6 c">
-      <p-card title="&nbsp;" [style]="{width: '460px',height:'250px',background:'#222222',borderRadius:'25px', boxShadow: '10px 10px 13px #531f5c87'}" styleClass="ui-card-shadow">
+      <p-card title="&nbsp;" [style]="{width: '550px',height:'350px',background:'#222222',borderRadius:'25px', boxShadow: '10px 10px 13px #531f5c87'}" styleClass="ui-card-shadow">
         <div>
           <label class="userlabel">
               <i  class="fa fa-user" aria-hidden="true" style="font-size:25px;color: #c5b4c9;"></i> &nbsp;&nbsp;User:</label>
@@ -26,6 +26,8 @@
 
           </p-dropdown>
         </div>
+        <br>
+        <br>
         <div>
           <label class="userlabel">Selected Month:-</label>
           <p-dropdown [options]="month" [ngModel]="selectedMonth" (ngModelChange)="getReportingForSelectedMonth($event)" placeholder="Select A Month"  [style]="{'width':'160px'}" filter="true">
@@ -35,7 +37,8 @@
           </p-dropdown> 
         </div>
           
-        
+        <br>
+        <br>
         
           
            
@@ -58,8 +61,8 @@
         <div class="ui-g bt1">
           <div class="ui-g-6 ui-sm-6 ui-md-6">
 
-            <p-button label="Gstr7" button type="button" [routerLink]="['/admin/dashboard',month,financialYear,userName,'Gstr7']" icon="fa fa-fw fa-arrow-right"
-              class="ui-button-rounded ui-button-success"></p-button>
+            <button type="button" (click)="gstr7()" icon="fa fa-fw fa-arrow-right"
+              class="ui-button-rounded ui-button-success">Gstr7</button>
           </div>
           <div class="ui-g-6 ui-sm-6 ui-md-6">
             <p-button label="Marketing Report" button type="button" (onClick)="adminUserMarketingCompanyReporting()" icon="fa fa-fw fa-arrow-right" class="ui-button-rounded ui-button-danger"></p-button>
@@ -69,4 +72,58 @@
       </p-card>
     </div>
   </div>
+</div> -->
+
+<div class ="ui-g-fluid">
+
+  <div class = "ui-g-4"></div>
+  
+  <div class = "ui-g-8">
+      
+      <div class = "ui-g-4">
+          <label for="accounting">Select Accounting Unit</label>
+      </div>
+      
+      <div class="ui-g-8">
+          <p-dropdown [options]="usersSelectList" [(ngModel)]="userName" placeholder="Select"    [style]="{'width':'160px'}" filter="true">
+              <ng-template let-option pTemplate="item">
+                <div translate>{{option.label}}</div>
+              </ng-template>
+            </p-dropdown>
+      </div>
+
+     
+     
+      
+      <div class ="ui-g-4">
+        <label class="userlabel">Selected Month:-</label>
+      </div>
+      
+      <div class ="ui-g-8">
+        <p-dropdown [options]="month" [ngModel]="selectedMonth" (ngModelChange)="getReportingForSelectedMonth($event)" placeholder="Select A Month"  [style]="{'width':'160px'}" filter="true">
+          <ng-template let-option pTemplate="item">
+            <div translate>{{option.label}}</div>
+          </ng-template>
+        </p-dropdown> 
+      </div>
+
+      <label class="userlabel" >Period Of Return</label>
+      <p-dropdown [options]="financialYearList" [(ngModel)]="financialYear"  placeholder="Select"  [style]="{'width':'160px'}" filter="true">
+        <ng-template let-option pTemplate="item">
+          <div translate>{{option.label}}</div>
+        </ng-template>
+      </p-dropdown> 
+      
+      <div class="ui-g-2"></div>
+      
+      <div class="ui-g-10">
+          <button pButton type="button" label=" Go to AU Dashboard" [routerLink]="['/admin/Gstr7',selectedMonth,financialYear,userName]" class="ui-button-success"></button>
+      </div>
+  
+  </div>
 </div>
+
+
+<!-- <div class="panel">
+  <select></select>
+</div> -->

@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { Iuserprofile } from './iuserprofile';
 import { ServiceBase } from '../service-base';
 import { tap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 
 
@@ -49,7 +50,7 @@ getProfile(){
 
 
 getAccountingUnits() {
-    return this.http.get<Iuserprofile[]>(`${this.baseUrl}/AccountingUnits`);
+    return this.http.get<Iuserprofile>(`${this.baseUrl}/AccountingUnits`);
   }
   
   updateProfile(userProfile : Iuserprofile){

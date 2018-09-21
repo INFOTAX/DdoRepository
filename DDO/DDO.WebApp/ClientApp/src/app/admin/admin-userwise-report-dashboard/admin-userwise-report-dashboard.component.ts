@@ -15,7 +15,7 @@ import { UserSetting } from '../../user-setting';
 export class AdminUserwiseReportDashboardComponent implements OnInit {
 
  id :number;
- userProfile: Iuserprofile[];
+ userProfile;
   
   usersSelectList : SelectItem[];
   userName;
@@ -55,7 +55,7 @@ export class AdminUserwiseReportDashboardComponent implements OnInit {
 
   
   gstr7(){
-    this._router.navigate(['admin/dashboard',this.month,this.financialYear,this.userName,'/Gstr7']);
+    this._router.navigate(['admin/Gstr7',this.month,this.financialYear,this.userName]);
   }
   adminUserMarketingCompanyReporting(){
     this._router.navigate(['admin/user_profile_marketing_reporting',this.userName]);
