@@ -9,6 +9,7 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuardService } from '../guard/auth-guard.service';
+import { UserProfileComponent } from '../user-profile/user-profile/user-profile.component';
 
 const appRoutes: Routes = [
   {path: 'admin',
@@ -25,6 +26,7 @@ const appRoutes: Routes = [
     { path: 'dashboard', component: AdminUserwiseReportDashboardComponent},
     { path: 'Gstr7/:monthId/:yearId/:accountingUnitId', component: Gstr7Component},
     { path: 'Gstr7/Consolidated/:monthId/:yearId/:accountingUnitId', component: Gstr7ConsolidatedComponent},
+    { path: 'user-profile/detail', component: UserProfileComponent},
     
      
   ]}

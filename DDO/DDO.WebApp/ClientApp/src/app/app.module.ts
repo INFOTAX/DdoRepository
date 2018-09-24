@@ -80,6 +80,7 @@ export function tokenGetter() {
       {path: 'tds', component: TdsListComponent },
       {path: 'tds/:id', component: TdsFormComponent },
       {path: 'dash-board', component: DashboardComponent },
+      { path: 'user-profile/detail', component: UserProfileComponent},
        ]
       
       

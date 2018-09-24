@@ -24,6 +24,7 @@ namespace DDO.Domain.TdsModule
         public double SgstAmount { get; set; }
         public double IgstAmount { get; set; }
         public double TdsAmount  { get; set; }
+        public double NetAmount  { get; set; }
 
         public bool IsActive { get; set; }  
 
@@ -40,7 +41,7 @@ namespace DDO.Domain.TdsModule
 
 
     public Tds(int supplierId, DateTime date, string placeOfSupply, double amountPaid, double cgstAmount,
-                double sgstAmount, double igstAmount, double tdsAmount, string accountingUnitId, int adminId)
+                double sgstAmount, double igstAmount, double tdsAmount, double netAmount, string accountingUnitId, int adminId)
     {
         SupplierId = supplierId;
         Date = date;
@@ -50,6 +51,7 @@ namespace DDO.Domain.TdsModule
         SgstAmount = sgstAmount;
         IgstAmount = igstAmount;
         TdsAmount = tdsAmount;
+        NetAmount = netAmount;
         AccountingUnitId = accountingUnitId;
         AdminId = adminId;
             IsActive = true;
@@ -57,7 +59,7 @@ namespace DDO.Domain.TdsModule
   }
 
      public void Modify(int supplierId, DateTime date, string placeOfSupply, double amountPaid, double cgstAmount,
-                double sgstAmount, double igstAmount, double tdsAmount, string accountingUnitId)
+                double sgstAmount, double igstAmount, double tdsAmount, double netAmount, string accountingUnitId)
     {
         SupplierId = supplierId;
         Date = date;
@@ -67,6 +69,7 @@ namespace DDO.Domain.TdsModule
         SgstAmount = sgstAmount;
         IgstAmount = igstAmount;
         TdsAmount = tdsAmount;
+        NetAmount = netAmount;
         AccountingUnitId = accountingUnitId;
         IsActive = true;
 

@@ -32,7 +32,8 @@ export class TdsListComponent implements OnInit {
       { field: 'id', header: 'Sn.', width: '5%' },
       { field: 'name', header: 'Name', width: '15%' },
       { field: 'placeOfSupply', header: 'Place Of Supply', width: '15%'},
-      { field: 'ContactNumber', header: 'Contact Number', width: '15%'}
+      { field: 'amountPaid', header: 'Amount Paid', width: '15%'},
+      { field: 'tds', header: 'TDS', width: '15%'}
       ];
      
       this.loading = true;

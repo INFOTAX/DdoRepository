@@ -8,6 +8,7 @@ export interface Itds {
     sgstAmount: number;
     igstAmount: number;
     tdsAmount: number;
+    netAmount: number;
     date: Date;
 }
 

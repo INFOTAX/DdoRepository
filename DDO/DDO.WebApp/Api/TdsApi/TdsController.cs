@@ -9,6 +9,8 @@ using DDO.WebApp.Api.AccountingUnitApi;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
+
+
 namespace DDO.WebApp.Api.SupplierApi
 {
     [Produces("application/json")]
@@ -35,6 +37,8 @@ namespace DDO.WebApp.Api.SupplierApi
             _database = database;
         }
 
+       
+       
         [HttpGet]
         public async Task<IEnumerable<TdsResource>> GetAll()
         {
@@ -44,6 +48,8 @@ namespace DDO.WebApp.Api.SupplierApi
              return _mapper.Map<List<Tds>,List<TdsResource>>(tds.Where(td => td.IsActive).ToList());
         }
 
+       
+       
           [HttpGet("{id}")]
         public async Task<SaveTdsResource> GetTdsById(int id)
         {
@@ -54,6 +60,8 @@ namespace DDO.WebApp.Api.SupplierApi
 
 
 
+       
+       
         [HttpPost]
         public async Task<IActionResult> CreateTds([FromBody] SaveTdsResource model)
         {
@@ -66,7 +74,7 @@ namespace DDO.WebApp.Api.SupplierApi
 
             var tds = new Tds(model.SupplierId, model.Date, model.PlaceOfSupply, model.AmountPaid,
                              model.CgstAmount, model.SgstAmount,model.IgstAmount, model.TdsAmount, 
-                                  AccountingUnitId, AdminId);
+                             model.NetAmount, AccountingUnitId, AdminId);
 
             _tdsRepository.Add(tds);
 
@@ -74,6 +82,10 @@ namespace DDO.WebApp.Api.SupplierApi
             return Ok(_mapper.Map<Tds, TdsResource>(tds));
         }
 
+      
+      
+    
+    
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateTds(int id, [FromBody] SaveTdsResource model)
         {
@@ -88,7 +100,7 @@ namespace DDO.WebApp.Api.SupplierApi
 
             tdsFromDb.Modify(model.SupplierId, model.Date, model.PlaceOfSupply, model.AmountPaid,
                              model.CgstAmount, model.SgstAmount,model.IgstAmount, model.TdsAmount, 
-                                  AccountingUnitId);
+                                 model.NetAmount, AccountingUnitId);
 
             await _unitOfWork.CompleteAsync();
             return Ok(_mapper.Map<Tds, TdsResource>(tdsFromDb));

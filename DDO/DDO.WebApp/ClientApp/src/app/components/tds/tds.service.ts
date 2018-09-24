@@ -18,6 +18,7 @@ export class TdsService extends ServiceBase<Itds>{
         sgstAmount: 0,
         igstAmount: 0,
         tdsAmount: 0,
+        netAmount: 0,
        }
     
   }
