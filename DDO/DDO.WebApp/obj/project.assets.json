@@ -12841,23 +12841,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Storm_breaker\\.nuget\\packages\\": {},
+    "C:\\Users\\golu2\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.WebApp\\DDO.WebApp.csproj",
+      "projectUniqueName": "f:\\OFFICE\\Github Repositories\\DdoRepository\\DDO\\DDO.WebApp\\DDO.WebApp.csproj",
       "projectName": "DDO.WebApp",
-      "projectPath": "D:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.WebApp\\DDO.WebApp.csproj",
-      "packagesPath": "C:\\Users\\Storm_breaker\\.nuget\\packages\\",
-      "outputPath": "D:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.WebApp\\obj\\",
+      "projectPath": "f:\\OFFICE\\Github Repositories\\DdoRepository\\DDO\\DDO.WebApp\\DDO.WebApp.csproj",
+      "packagesPath": "C:\\Users\\golu2\\.nuget\\packages\\",
+      "outputPath": "f:\\OFFICE\\Github Repositories\\DdoRepository\\DDO\\DDO.WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Storm_breaker\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\golu2\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12870,11 +12870,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "D:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.Domain\\DDO.Domain.csproj": {
-              "projectPath": "D:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.Domain\\DDO.Domain.csproj"
+            "f:\\OFFICE\\Github Repositories\\DdoRepository\\DDO\\DDO.Domain\\DDO.Domain.csproj": {
+              "projectPath": "f:\\OFFICE\\Github Repositories\\DdoRepository\\DDO\\DDO.Domain\\DDO.Domain.csproj"
             },
-            "D:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.Persistence\\DDO.Persistence.csproj": {
-              "projectPath": "D:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.Persistence\\DDO.Persistence.csproj"
+            "f:\\OFFICE\\Github Repositories\\DdoRepository\\DDO\\DDO.Persistence\\DDO.Persistence.csproj": {
+              "projectPath": "f:\\OFFICE\\Github Repositories\\DdoRepository\\DDO\\DDO.Persistence\\DDO.Persistence.csproj"
             }
           }
         }
