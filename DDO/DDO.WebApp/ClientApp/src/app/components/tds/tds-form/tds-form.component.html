@@ -102,7 +102,7 @@
         </div>
   
         <div class="ui-g-5">
-        <label style="margin-top:5px;"  for="netAmount">Total NEt Amount</label>
+        <label style="margin-top:5px;"  for="netAmount">Total Net Amount</label>
         </div>
         <div class="ui-g-7">
           <input pInputText type="text"  id="netAmount" formControlName="netAmount" style="width:160px" onlyNumber="true" >
@@ -116,6 +116,8 @@
       <div class="ui-dialog-buttonpane ui-helper-clearfix">
           <button type="button" pButton icon="fa fa-fw fa-check" (click)="saveTds()" (onclick)="disable()" [disabled]="tdsForm.invalid"label="Save"></button>
       </div>
+     
+     
   </p-footer>
 
 </p-dialog>

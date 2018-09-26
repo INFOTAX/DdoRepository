@@ -120,6 +120,10 @@ private getTds(this_id):void{
 }
 
 
+
+
+
+
 checkSupplyType(event) {
 
   let pos = this.tdsForm.get('placeOfSupply').value;
@@ -253,18 +257,18 @@ saveTds(): void {
 
       let tdsToSave = Object.assign({}, this.tds, this.tdsForm.value);
       this.busy = true;
-      this.tdsService.save(tdsToSave, this.id).subscribe(()=> this.onSaveComplete());
+      this.tdsService.save(tdsToSave, this.id).subscribe(()=> this.onSaveComplete(this.id));
       
            }
 
 
   else if (!this.tdsForm.dirty) {
-      this.onSaveComplete();
+      this.onSaveComplete(this.id);
   }
   
 }
 
-private onSaveComplete():void{
+private onSaveComplete(newId: number):void{
   const displayMsg = this.id == 0 ? 'Saved' : 'Updated';
   this.msgs = [];
   this.msgs.push({
@@ -275,8 +279,15 @@ private onSaveComplete():void{
   // this.router.navigate(['/customer']);
   this.refreshList.emit(true);
   this.displayDialog=false;
+  this.router.navigate(['authenticated/tds-print',newId])
   this.closeDialog.emit(null);
+  
 }
+
+
+
+
+
 
 disable(){
   this.busy = false;
