@@ -54,6 +54,7 @@ export class TdsFormComponent implements OnInit {
   registrationType : SelectItem[];
   busy : boolean;
 
+  
   constructor(private fb: FormBuilder,
               private tdsService: TdsService,
               private router: Router,
@@ -158,7 +159,7 @@ checkSupplyType(event) {
 
  tdsCalculate(){
  let amountPaid = this.tdsForm.get('amountPaid').value;
- console.log(amountPaid);
+//  console.log(amountPaid);
  let cgstAmount: number;
  let sgstAmount: number;
  let igstAmount: number;
