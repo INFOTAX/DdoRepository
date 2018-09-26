@@ -38,19 +38,21 @@ export class TdsPrintComponent implements OnInit {
           <title>Print tab</title>
           <style type="text/css" media="print">
           .container{
-            height:1120px !important;
+            height:620px !important;
             width:820px !important;
            
             }
             div.container {
-                font: normal 16px Arial, Helvetica, Sans-serif !important;
+                font: normal 16px Arial,Bell Mt !important;
                 background: white;
                 padding: 20px;
                 
             }
            
             textarea { border: 0 !important;
-              font: 16px Georgia, Serif !important;
+              font-size: 16px !important;
+              font-family: Helvetica, Sans-Serif;
+              text-decoration: uppercase;
                overflow: hidden !important;
                 resize: none !important; 
                }
@@ -149,12 +151,14 @@ div {
   display:block;
 }
 .lefthead{
-  font-family:Arial Round Mt;
+  font-style: normal;
+  font-family:Arial, Helvetica, Sans-Serif;
   margin-top:50px;
   text-align:left;
 }
 .righthead{
-  font-family:Arial Round Mt;
+  font-style: normal;
+  font-family:Arial, Helvetica, Sans-Serif;
   margin-top:-30px;
   text-align:right;
 }
@@ -163,8 +167,11 @@ panel-body {
   padding: 15px;
 }
 body {
+  font-style: normal !important;
   padding-top: 32px;
   font-size: 13px;
+  font-family: Helvetica, Sans-Serif;
+  text-decoration: uppercase;
   line-height: 1.42857143;
   color: #333;
   background-color: #fff;
