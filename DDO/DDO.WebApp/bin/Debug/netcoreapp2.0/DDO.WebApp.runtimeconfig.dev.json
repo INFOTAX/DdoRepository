@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\golu2\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\golu2\\.nuget\\packages",
+      "C:\\Users\\Storm_breaker\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Storm_breaker\\.nuget\\packages",
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ]
   }

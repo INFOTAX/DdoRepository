@@ -7,3 +7,12 @@ F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.Domain\obj\Debug\netcoreapp2
 F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.Domain\obj\Debug\netcoreapp2.0\DDO.Domain.AssemblyInfo.cs
 F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.Domain\obj\Debug\netcoreapp2.0\DDO.Domain.dll
 F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.Domain\obj\Debug\netcoreapp2.0\DDO.Domain.pdb
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.Domain\bin\Debug\netcoreapp2.0\DDO.Domain.deps.json
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.Domain\bin\Debug\netcoreapp2.0\DDO.Domain.dll
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.Domain\bin\Debug\netcoreapp2.0\DDO.Domain.pdb
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.Domain\obj\Debug\netcoreapp2.0\DDO.Domain.csprojAssemblyReference.cache
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.Domain\obj\Debug\netcoreapp2.0\DDO.Domain.csproj.CoreCompileInputs.cache
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.Domain\obj\Debug\netcoreapp2.0\DDO.Domain.AssemblyInfoInputs.cache
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.Domain\obj\Debug\netcoreapp2.0\DDO.Domain.AssemblyInfo.cs
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.Domain\obj\Debug\netcoreapp2.0\DDO.Domain.dll
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.Domain\obj\Debug\netcoreapp2.0\DDO.Domain.pdb

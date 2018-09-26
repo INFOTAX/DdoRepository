@@ -14,3 +14,19 @@ F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\bin\Debug\netcoreapp2
 F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\obj\Debug\netcoreapp2.0\DDO.WebApp.csproj.CopyComplete
 F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\obj\Debug\netcoreapp2.0\DDO.WebApp.dll
 F:\OFFICE\Github Repositories\DdoRepository\DDO\DDO.WebApp\obj\Debug\netcoreapp2.0\DDO.WebApp.pdb
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.WebApp\bin\Debug\netcoreapp2.0\DDO.WebApp.deps.json
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.WebApp\bin\Debug\netcoreapp2.0\DDO.WebApp.runtimeconfig.json
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.WebApp\bin\Debug\netcoreapp2.0\DDO.WebApp.runtimeconfig.dev.json
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.WebApp\bin\Debug\netcoreapp2.0\DDO.WebApp.dll
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.WebApp\bin\Debug\netcoreapp2.0\DDO.WebApp.pdb
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.WebApp\bin\Debug\netcoreapp2.0\DDO.Domain.dll
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.WebApp\bin\Debug\netcoreapp2.0\DDO.Persistence.dll
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.WebApp\bin\Debug\netcoreapp2.0\DDO.Domain.pdb
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.WebApp\bin\Debug\netcoreapp2.0\DDO.Persistence.pdb
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.WebApp\obj\Debug\netcoreapp2.0\DDO.WebApp.csprojAssemblyReference.cache
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.WebApp\obj\Debug\netcoreapp2.0\DDO.WebApp.csproj.CoreCompileInputs.cache
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.WebApp\obj\Debug\netcoreapp2.0\DDO.WebApp.AssemblyInfoInputs.cache
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.WebApp\obj\Debug\netcoreapp2.0\DDO.WebApp.AssemblyInfo.cs
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.WebApp\obj\Debug\netcoreapp2.0\DDO.WebApp.csproj.CopyComplete
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.WebApp\obj\Debug\netcoreapp2.0\DDO.WebApp.dll
+D:\tasksss\ddorepo\DdoRepository\DDO\DDO.WebApp\obj\Debug\netcoreapp2.0\DDO.WebApp.pdb

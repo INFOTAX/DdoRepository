@@ -664,23 +664,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\golu2\\.nuget\\packages\\": {},
+    "C:\\Users\\Storm_breaker\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "f:\\OFFICE\\Github Repositories\\DdoRepository\\DDO\\DDO.Domain\\DDO.Domain.csproj",
+      "projectUniqueName": "d:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.Domain\\DDO.Domain.csproj",
       "projectName": "DDO.Domain",
-      "projectPath": "f:\\OFFICE\\Github Repositories\\DdoRepository\\DDO\\DDO.Domain\\DDO.Domain.csproj",
-      "packagesPath": "C:\\Users\\golu2\\.nuget\\packages\\",
-      "outputPath": "f:\\OFFICE\\Github Repositories\\DdoRepository\\DDO\\DDO.Domain\\obj\\",
+      "projectPath": "d:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.Domain\\DDO.Domain.csproj",
+      "packagesPath": "C:\\Users\\Storm_breaker\\.nuget\\packages\\",
+      "outputPath": "d:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\golu2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Storm_breaker\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
