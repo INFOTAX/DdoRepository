@@ -1,32 +1,71 @@
-<!-- {{tds?.amountPaid}}-->
+<!-- {{tds?.placeOfSupply}}-->
+ <div class="navtop">
+     <div class="row">
+         <div class="col-xs-4">
+              
+                <button class="btn btn-dark" id="backbutton" (click)="tdsList()"> &larr;BACK</button>
+</div>
+<div class="col-xs-8">
+                <button class="btn btn-sucess" id="printbutton" (click)="print()">
+                        <i class="fa fa-print" aria-hidden="true"></i>
+                         PRINT</button>
+         </div>
+     </div>
+ 
 <div id="print-section">
        
 <div class="container container-fluid">
         <div class="row">
                 <div class="col-xs-12">
     <div class="header">
-            <textarea class="hup">INVOICE</textarea>
+            <textarea class="hup">TDS Slip</textarea>
        <br>
        </div>
        <div class="headerDown">
        <textarea class="hdown1"> GST SUVIDHA</textarea>
+       <!--<textarea class="hdown1">{{userProfile?.coDepartment}}</textarea>-->
        <br>
-       <textarea class="hdown2">2, Mukhtar Toli,Nala Road Kadam Kuan </textarea>
+       <textarea class="hdown2">{{userProfile?.address}} </textarea>
     </div><!--header part end-->
 
     <div class="row"><!--addres row start-->
             <div class="col-xs-6">
               <address  class="lefthead">
-                  <b>NAME OF DEDUCTOR</b>:ABCDEF<br>
-                  <b>DEDUCTOR GSTIN</b>:12ww37yd3239<br>
+                    <strong>DEDUCTOR DETAILS:-</strong><br/>
+                  <div class="row">
+                 <div class="col-xs-2 sp"><b>Name</b></div>
+                 <div class="col-xs-10 sp">:&nbsp;:{{userProfile?.businessName}}<br></div>
+                </div>
+                <div class="row">
+                 <div class="col-xs-2 sp"><b>GSTIN</b></div>
+                 <div class="col-xs-10 sp">:&nbsp;{{userProfile?.tdsGstin}}<br></div>
+                
+                </div>
               </address>
             </div>
             <!--address left div end-->
             <!--address right div start-->
             <div class="col-xs-6 text-right">
     				<address class="righthead">
-                    <b>Date:</b> 12/3/2018<br>
-                    <b>Place of supply:</b> BIHAR<br>
+
+                          <div class="row">
+                                    <div class="col-xs-2 sp sdate"><b>Date</b></div>
+                                    <div class="col-xs-8 sp pdate">:{{tds?.date|date: 'dd/mm/yyyy'}}&nbsp;
+                                        <br></div>
+                                   </div>
+
+                                   <div class="row">
+                                    <div class="col-xs-12 sp">
+                                       <span><b>Place Of Supply</b></span> 
+                                       <span class="psup">:{{tds?.placeOfSupply}}</span>
+                                    </div>
+                                   
+                                   
+                                   </div>
+
+<!--
+                 <span class="datestyl"><b>Date</b></span> <span class="pdate">:{{tds?.date|date: 'dd/MM/yyyy'}}</span><br>
+                    <b>Place of supply</b>:{{tds?.placeOfSupply}}<br>-->
     					
     				</address>
                 </div><!--address right end-->
@@ -35,20 +74,17 @@
             <div class="row">
                     <div class="col-xs-6">
                         <address  class="lefthead">
-                            <strong>SUPPLIER DETAIL:</strong><br>
+                            <strong>SUPPLIER DETAILS:</strong><br>
                             <b>Name:</b> 
-                             GST SUVIDHA<br>
-                            <b>Address:</b> 
-                           KANKARBAGH PATNA<br>
+                           {{supplier?.name}}<br>
+                            <b>Address:</b> <br>
+                            {{supplier?.address}}<br>
+                           <b>GSTIN:</b>
+                           {{supplier?.gstin}}<br>
                           
                         </address>
                     </div>
-                  <!--  <div class="col-xs-6 text-right">
-                        <address  class="righthead">
-                            <strong>Order Date:</strong><br>
-                            March 7, 2014<br><br>
-                        </address>
-                    </div>-->
+                  
                 </div>  <!--address row secondory end-->
                 </div><!--div col end-->
                 </div><!--div 1st row end-->
@@ -57,7 +93,7 @@
     	<div class="col-md-12">
     		<div class="panel panel-default">
     			<div class="panel-heading">
-    				<h3 class="panel-title"><strong>Order summary</strong></h3>
+    				<h3 class="panel-title"><strong>Deduction Detail</strong></h3>
     			</div>
     			<div class="panel-body">
     				<div class="table-responsive">
@@ -90,15 +126,26 @@
                   
                 
             </div>
-            <button class="btn bnt-primary" (click)="print()">PRINT</button>
+          <!--  <button class="btn bnt-primary" id="printbutton" (click)="print()">PRINT</button>-->
     	</div>
     </div>
     
-
+    <div class="row">
+<div class="col-xs-8 text-left ref">
+   <span> <strong > Reference:</strong></span>
+   <span>this has been terminated at all djfk</span>
+</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-7"></div>
+            <div class="col-xs-5  text-right">
+                <strong class="authorised"><h4>Authorised Signature:</h4></strong>
+            </div>
+                </div>
 
 <!--div secon row end for table-->
 
 </div><!--CONTAINER DIV END-->
 </div>
-<button (click)="print()">print</button>
+</div>
 

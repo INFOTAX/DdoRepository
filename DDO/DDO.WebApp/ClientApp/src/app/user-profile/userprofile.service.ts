@@ -8,19 +8,21 @@ import { Observable } from 'rxjs';
 
 
 
+
 @Injectable()
 export class UserProfileService extends ServiceBase<Iuserprofile>{
   intializeObject(): Iuserprofile {
 
     return{
               id: 0,
+              coDepartment:"",
               businessName: "",
-              gstin: "",
+            
               tdsGstin: "",
               address: "",
               email: "",
               contactNumber: "",
-              turnOver: "",
+             
               bankAccountNumber: "",
               ifscCode: "",
               registrationType: "",
@@ -29,7 +31,7 @@ export class UserProfileService extends ServiceBase<Iuserprofile>{
               placeOfSupply:0,
               selectedYear :  new Date(),
               bankAccountName : "",
-              currentGrossTurnOver : 0,
+           
       
             pan : ""
           }  }

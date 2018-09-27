@@ -79,7 +79,7 @@ button{
     float:right;
     font-size: 12px;
  text-align: left;
- margin-right: 6px;
+ margin-right:30px;
 }
 .panel-title {
     margin-top: 0;
@@ -88,4 +88,19 @@ button{
     color: inherit;
     text-align: center;
     
+}
+.datestyl{
+padding-right:20px;
+}
+h4{
+font-weight:700;
+font-size:12px;
+}
+#backbutton{
+    background-color: rgb(37, 49, 45);
+    color:white;
+}
+#printbutton{
+    background-color: aquamarine;
+    font-weight:700;
 }

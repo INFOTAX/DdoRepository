@@ -71,6 +71,7 @@ export class TdsFormComponent implements OnInit {
        placeOfSupply: ['', ],
        date:[new Date()],
       amountPaid: [0 ],
+      reference: ['', ],
       //  customerOpeningDate: [new Date(), [Validators.required]],
        cgstAmount: [0] ,
       sgstAmount: [0],

@@ -75,6 +75,7 @@ export function tokenGetter() {
         },
     
 
+
         children : [
           
       {path: 'supplier/:id', component: SupplierFormComponent},
@@ -83,7 +84,7 @@ export function tokenGetter() {
       {path: 'tds/:id', component: TdsFormComponent },
       {path: 'tds-print/:id', component: TdsPrintComponent },
       {path: 'dash-board', component: DashboardComponent },
-      { path: 'user-profile/detail', component: UserProfileComponent},
+      { path: 'user-profile/:action', component: UserProfileComponent},
        ]
       
       

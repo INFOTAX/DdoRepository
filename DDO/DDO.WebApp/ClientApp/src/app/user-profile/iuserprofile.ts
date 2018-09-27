@@ -1,12 +1,12 @@
 export interface Iuserprofile {
     id: number,
     businessName: string,
-    gstin: string,
+   
     tdsGstin: string,
     address: string,
     email: string,
     contactNumber: string,
-    turnOver: string,
+    
     bankAccountNumber: string,
     ifscCode: string,
     registrationType: string,
@@ -15,7 +15,8 @@ export interface Iuserprofile {
     placeOfSupply:number,
     selectedYear : Date,
     bankAccountName : string,
-    currentGrossTurnOver : number,
+    coDepartment :string,
+  
     pan: string,
     
 }

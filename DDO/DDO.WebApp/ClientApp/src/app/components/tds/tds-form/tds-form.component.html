@@ -108,13 +108,21 @@
           <input pInputText type="text"  id="netAmount" formControlName="netAmount" style="width:160px" onlyNumber="true" >
           
         </div>
-
+<!--for refernce start-->
+<div class="ui-g-5">
+    <label style="margin-top:5px;"  for="reference">Reference</label>
+    </div>
+    <div class="ui-g-7">
+      <input pInputText type="text"  id="reference" formControlName="reference" style="width:160px" onlyNumber="true" >
+      
+    </div>
+<!--for refernce end-->
 
     </div>
     
     <p-footer>
       <div class="ui-dialog-buttonpane ui-helper-clearfix">
-          <button type="button" pButton icon="fa fa-fw fa-check" (click)="saveTds()" (onclick)="disable()" [disabled]="tdsForm.invalid"label="Save"></button>
+          <button type="button" pButton icon="fa fa-fw fa-check" (click)="saveTds()" (onclick)="disable()" [disabled]="tdsForm.invalid"label="Save&next"></button>
       </div>
      
      

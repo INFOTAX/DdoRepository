@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TdsService } from '../tds.service';
+import { SupplierService } from '../../suppliers/supplier.service';
+import { UserProfileService } from '../../../user-profile/userprofile.service';
 
 @Component({
   selector: 'app-tds-print',
@@ -10,22 +12,33 @@ import { TdsService } from '../tds.service';
 export class TdsPrintComponent implements OnInit {
   id: number;
   tds;
-
-  constructor(private route: ActivatedRoute, private tdsService: TdsService ) { }
+  supplier;
+ userProfile;
+  constructor(private route: ActivatedRoute,
+    private _router : Router, private tdsService:TdsService ,
+  private supplierService:SupplierService,
+private userProfileService:UserProfileService) { }
 
   ngOnInit() {
+
+    this.userProfileService.getProfile().subscribe(resp=>this.userProfile=resp);
 
     this.route.params.subscribe(params => 
       {this.id = params['id'];
             this.getPrint(this.id);
        
     })
+  } 
+  tdsList(){
+this._router.navigate(['/authenticated/tds']);
+   
   }
-
 
   getPrint(id: number)
   {
       this.tdsService.getOne(id).subscribe(resp=>this.tds=resp);
+      this.supplierService.getOne(id).subscribe(resp=>this.supplier=resp);
+      
   }
   print(): void {
     let printContents, popupWin;
@@ -35,7 +48,7 @@ export class TdsPrintComponent implements OnInit {
     popupWin.document.write(`
       <html>
         <head>
-          <title>Print tab</title>
+          
           <style type="text/css" media="print">
           .container{
             height:620px !important;
@@ -64,7 +77,7 @@ export class TdsPrintComponent implements OnInit {
                  width: 100%; 
                  margin: 20px 0; 
                  background: #222; 
-                 text-align: center; 
+                 text-align: center ; 
                  color: white; 
                  font: bold 15px;
                  font-family: Helvetica, Sans-Serif;
@@ -150,6 +163,10 @@ export class TdsPrintComponent implements OnInit {
 div {
   display:block;
 }
+.sp{
+  display:inline-block;
+  padding-right:4px;
+}
 .lefthead{
   font-style: normal;
   font-family:Arial, Helvetica, Sans-Serif;
@@ -160,6 +177,7 @@ div {
   font-style: normal;
   font-family:Arial, Helvetica, Sans-Serif;
   margin-top:-30px;
+  
   text-align:right;
 }
 
@@ -188,7 +206,25 @@ body {
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  touch-action: manipulation;
+  touch-action: manipulation;}
+  .pdate{
+   
+    margin-right:49px;
+  }
+  .psup{
+    margin-right:14px;
+  }
+  #printbutton{
+    display:none;
+  }
+  .ref{
+    margin-top:20px;
+  }
+  .authorised{
+    padding-right:30px;
+ margin-right:80px;
+ margin-top:10px;
+  }
           </style>
         </head>
     <body onload="window.print();window.close()">${printContents}</body>

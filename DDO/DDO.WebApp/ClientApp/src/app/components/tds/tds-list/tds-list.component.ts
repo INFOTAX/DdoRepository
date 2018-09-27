@@ -103,5 +103,13 @@ export class TdsListComponent implements OnInit {
          }
      }, 1000);
  }
+ 
+ tdsPrint(anki){
+this.selectedTds=anki;
+this.router.navigate(['authenticated/tds-print',this.selectedTds.id])
+ }
+ 
+
+ 
  }
  

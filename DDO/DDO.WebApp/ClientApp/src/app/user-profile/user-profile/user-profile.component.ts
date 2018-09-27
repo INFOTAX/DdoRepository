@@ -74,12 +74,13 @@ export class UserProfileComponent implements OnInit {
     this.userprofileForm.patchValue({
         id: this.userprofile.id,
         businessName: this.userprofile.businessName,
-        gstin: this.userprofile.gstin,
+       
         tdsGstin: this.userprofile.tdsGstin,
+        coDepartment:this.userprofile.coDepartment,
         email: this.userprofile.email,
         address: this.userprofile.address,
         contactNumber: this.userprofile.contactNumber,
-        turnOver: this.userprofile.turnOver,
+        
         bankAccountName: this.userprofile.bankAccountName,
         bankAccountNumber: this.userprofile.bankAccountNumber,
         ifscCode: this.userprofile.ifscCode,
@@ -89,7 +90,7 @@ export class UserProfileComponent implements OnInit {
         selectedYear: this.userprofile.selectedYear,
         termsAndCondition: this.userprofile.termsAndCondition,
         
-        currentGrossTurnOver: this.userprofile.currentGrossTurnOver,
+        
         pan : this.userprofile.pan
     });
         this.route.params.subscribe(params => {
