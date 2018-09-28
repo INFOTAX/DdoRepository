@@ -12847,11 +12847,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.WebApp\\DDO.WebApp.csproj",
+      "projectUniqueName": "D:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.WebApp\\DDO.WebApp.csproj",
       "projectName": "DDO.WebApp",
-      "projectPath": "d:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.WebApp\\DDO.WebApp.csproj",
+      "projectPath": "D:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.WebApp\\DDO.WebApp.csproj",
       "packagesPath": "C:\\Users\\Storm_breaker\\.nuget\\packages\\",
-      "outputPath": "d:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.WebApp\\obj\\",
+      "outputPath": "D:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12870,11 +12870,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "d:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.Domain\\DDO.Domain.csproj": {
-              "projectPath": "d:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.Domain\\DDO.Domain.csproj"
+            "D:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.Domain\\DDO.Domain.csproj": {
+              "projectPath": "D:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.Domain\\DDO.Domain.csproj"
             },
-            "d:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.Persistence\\DDO.Persistence.csproj": {
-              "projectPath": "d:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.Persistence\\DDO.Persistence.csproj"
+            "D:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.Persistence\\DDO.Persistence.csproj": {
+              "projectPath": "D:\\tasksss\\ddorepo\\DdoRepository\\DDO\\DDO.Persistence\\DDO.Persistence.csproj"
             }
           }
         }

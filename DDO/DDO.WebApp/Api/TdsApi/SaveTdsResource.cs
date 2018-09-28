@@ -1,4 +1,5 @@
 using System;
+using DDO.WebApp.Mappings;
 
 namespace DDO.WebApp.Api.SupplierApi
 {
@@ -8,6 +9,7 @@ namespace DDO.WebApp.Api.SupplierApi
 
         public int SupplierId { get; set; }
 
+        public KeyValuePairResource Supplier {get; set;}
         public DateTime Date { get; set; }
         public string PlaceOfSupply { get; set; }
         public double AmountPaid { get; set; }
